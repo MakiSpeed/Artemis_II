@@ -1,4 +1,4 @@
-public abstract class mission {
+public abstract class Mission {
 
     private String nom;
     private double distance;

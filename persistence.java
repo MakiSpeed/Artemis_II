@@ -1,3 +1,3 @@
-public class persistence {
+public class Persistence {
     
 }

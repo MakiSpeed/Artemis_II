@@ -1,3 +1,3 @@
-public abstract class capsule {
+public abstract class Capsule {
 
 }

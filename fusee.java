@@ -1,3 +1,3 @@
-public class fusee {
+public class Fusee {
     
 }

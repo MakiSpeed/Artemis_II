@@ -1,4 +1,4 @@
-public abstract class lanceur {
+public abstract class Lanceur {
     private String nom;
     private double carburantMax;
     private double chargeUtileMax;

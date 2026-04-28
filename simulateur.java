@@ -1,3 +1,3 @@
-public class simulateur {
+public class Simulateur {
     
 }

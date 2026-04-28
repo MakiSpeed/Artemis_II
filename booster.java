@@ -1,4 +1,4 @@
-public class booster {
+public class Booster {
     private String _nom;
 
     public String nom ; {
