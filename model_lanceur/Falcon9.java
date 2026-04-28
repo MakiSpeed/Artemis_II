@@ -1,10 +1,20 @@
-public abstract class Falcon9 extends lanceur {
-    public Falcon9(String nom, double carburantMax, double chargeUtileMax, double boostersMax, int habite, double prix) {
-        super(nom, carburantMax, chargeUtileMax, boostersMax, habite, prix);
+public class Falcon9 extends Lanceur {
+
+    // Pas de nouveaux attributs — ils sont dans Lanceur
+
+    public Falcon9() {
+        // Valeurs directement depuis l'annexe du sujet
+        super("Falcon 9",  500,  22, 0, true,   60);
     }
 
     @Override
-    public void calculerPousseeMax() {
-        // Implémentation spécifique pour Falcon 9
+    public double calculerPousseeMax() {
+        //  kN — 9 moteurs Merlin
+        return 7600;
+    }
+
+    @Override
+    public String toString() {
+        return "Falcon9 | Carburant max: " + getCarburantMax() + "t | Prix: " + getPrix() + "M€";
     }
 }

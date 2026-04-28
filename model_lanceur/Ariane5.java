@@ -1,10 +1,20 @@
-public abstract class Ariane5 extends lanceur {
-    public Ariane5(String nom, double carburantMax, double chargeUtileMax, double boostersMax, int habite, double prix) {
-        super(nom, carburantMax, chargeUtileMax, boostersMax, habite, prix);
+public class Ariane5 extends Lanceur {
+
+    // Pas de nouveaux attributs — ils sont dans Lanceur
+
+    public Ariane5() {
+        // Valeurs directement depuis l'annexe du sujet
+        super("Ariane 5",  700,  20, 2, false, 180);
     }
 
     @Override
-    public void calculerPousseeMax() {
-        // Implémentation spécifique pour Ariane 5
+    public double calculerPousseeMax() {
+        //  kN — moteur Vulcain + 2 boosters EAP
+        return 13000;
+    }
+
+    @Override
+    public String toString() {
+        return "Ariane5 | Carburant max: " + getCarburantMax() + "t | Prix: " + getPrix() + "M€";
     }
 }
