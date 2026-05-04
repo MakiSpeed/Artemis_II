@@ -1,9 +1,9 @@
 public abstract class Capsule {
-    private String nom;
-    private boolean habitee;
-    private int occupantsMax;
-    private double masse;
-    private double prix;
+    private final String nom;
+    private final boolean habitee;
+    private final int occupantsMax;
+    private final double masse;
+    private final double prix;
 
     public Capsule(String nom, boolean habitee, int occupantsMax, double masse, double prix) {
         this.nom = nom;
@@ -13,7 +13,6 @@ public abstract class Capsule {
         this.prix = prix;
     }
 
-    // Méthode abstraite à redéfinir dans chaque sous-classe
     public abstract String getDescription();
 
     // Getters

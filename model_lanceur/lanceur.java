@@ -1,10 +1,10 @@
 public abstract class Lanceur {
-    private String nom;
-    private double carburantMax;
-    private double chargeUtileMax;
-    private int boostersMax;
-    private boolean habite;
-    private double prix;
+    private final String nom;
+    private final double carburantMax;
+    private final double chargeUtileMax;
+    private final int boostersMax;
+    private final boolean habite;
+    private final double prix;
 
     // Constructeur séparé de la méthode abstraite
     public Lanceur(String nom, double carburantMax, double chargeUtileMax,
