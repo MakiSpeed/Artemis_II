@@ -32,12 +32,12 @@ public class Fusee {
     }
 
     public double calculerMasseTotale() {
-        double masse = lanceur.getChargeUtileMax() + capsule.getMasse();
-        for (Booster b : boosters) {
-            masse += b.getMasse();
-        }
-        return masse;
+    double masse = capsule.getMasse();
+    for (Booster b : boosters) {
+        masse += b.getMasse();
     }
+    return masse;
+}
 
     public double calculerCoutTotal() {
         double cout = lanceur.getPrix() + capsule.getPrix();
