@@ -20,7 +20,7 @@ public class Fusee {
         this.boosters = boosters;
     }
 
-    // Ajouter un booster (surcharge obligatoire)
+    // Ajouter un booster (surcharge)
     public void ajouterBooster(Booster booster) {
         boosters.add(booster);
     }
