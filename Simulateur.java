@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,7 +62,7 @@ public class Simulateur {
         missions.add(new CrioLifeEuropa());
     }
 
-    public Lancement effectuerLancement(Fusee fusee, Mission mission) throws Exception {
+    public Lancement effectuerLancement(Fusee fusee, Mission mission) throws CarburantInsuffisantException {
 
         // Vérification 1 — trop de boosters
         if (fusee.getBoosters().size() > fusee.getLanceur().getBoostersMax()) {
@@ -76,7 +77,7 @@ public class Simulateur {
         // Vérification 3 — carburant
         double carburant = mission.calculerCarburantNecessaire(fusee.calculerMasseTotale());
         if (carburant > fusee.getLanceur().getCarburantMax()) {
-            return new Lancement(fusee, mission, false, "Carburant insuffisant", 0);
+            throw new CarburantInsuffisantException(carburant, fusee.getLanceur().getCarburantMax());
         }
 
         // Vérification 4 — capsule compatible
@@ -99,9 +100,23 @@ public class Simulateur {
     }
 
     // Getters
-    public List<Lanceur> getLanceurs() { return lanceurs; }
-    public List<Capsule> getCapsules() { return capsules; }
-    public List<Booster> getBoosters() { return boosters; }
-    public List<Mission> getMissions() { return missions; }
-    public List<Lancement> getHistorique() { return historique; }
+    public List<Lanceur> getLanceurs() {
+        return lanceurs;
+    }
+
+    public List<Capsule> getCapsules() {
+        return capsules;
+    }
+
+    public List<Booster> getBoosters() {
+        return boosters;
+    }
+
+    public List<Mission> getMissions() {
+        return missions;
+    }
+
+    public List<Lancement> getHistorique() {
+        return historique;
+    }
 }
